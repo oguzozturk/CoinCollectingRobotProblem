@@ -1,0 +1,18 @@
+﻿
+Algorithm:
+First of all, read file and create 2D matrix(line 33-40).
+Then, make two nested loop which collects coin one by one row at first column then again we make same two nested loop but this time it collects coin one by one column at first row(53-100).
+Third step using this formula F(i,j)=max{F(i−1, j), F(i, j −1)}+cij for 1≤i ≤n, 1≤j ≤m(line 97), w
+e find maximum number of coins at last element of matrix.
+Return arraytotal(n-1,m-1)(line 102)
+Secondly, create a loop to finds path which collect maximum number of coins.
+ Loop begin to compare last element .Last element is F[n-1,m-1] and calculate max{F(n−2, m-1), F(n-1, m-2)} until F(n-2, m-1), F(n-1, m-2)}  (line 110-152)one of two is zero.
+Then assign maximum values ‘P’ and gives the path.
+
+Analysis:
+The time efficiency is big theta(nm) because it takes constant time.The space efficiency is also big theta(n+m).This algorithm is dynamic programming.
+
+
+ 
+     
+
